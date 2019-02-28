@@ -1,0 +1,315 @@
+/* Red: rgb(230,60,60) */
+/* Blue: rgb(0,150,255) */
+
+body {
+	background:rgb(40,40,40); 
+}
+input::placeholder {
+	color:rgb(150,150,150);
+}
+a {
+	color:rgb(0,150,255);
+}
+
+.spoiler {
+	color:rgb(245,245,245);
+	background:rgb(245,245,245);
+}
+.spoiler:before {
+	color:rgb(75,75,75);
+}
+
+.column {
+	color:rgb(245,245,245);
+}
+.sidebar-wrapper {
+	background:rgb(40,40,40);
+}
+.notes-wrapper {
+	background:rgb(50,50,50);
+	box-shadow:0px 5px 15px rgba(0,0,0,0.2);
+}
+.editor-wrapper {
+	background:rgb(55,55,55);
+	box-shadow:0px 5px 15px rgba(0,0,0,0.2);
+}
+
+#desktop .sidebar-icon-wrapper:hover svg, .sidebar-icon-wrapper.active svg {
+	fill:rgb(0,150,255);
+}
+.sidebar-icon-wrapper svg {
+	fill:rgb(245,245,245);
+}
+
+#desktop .note-wrapper:hover {
+	background:rgb(65,65,65);
+}
+.note-container {
+	border-bottom:1px solid rgb(150,150,150);
+}
+.note-date-wrapper {
+	color:rgb(140,140,140);
+}
+.note-status-wrapper .locked-icon {
+	fill:rgba(230,60,60,0);
+}
+.note-status-wrapper .unlocked-icon {
+	fill:rgb(200,200,200);
+}
+.note-status-wrapper .globe-icon {
+	fill:rgba(15,200,0,0);
+}
+.search-wrapper {
+	background:rgb(65,65,65);
+	box-shadow:0px 0px 15px rgba(0,0,0,0.2);
+}
+.search-bar {
+	color:rgb(245,245,245);
+}
+
+.actions-navbar {
+	background:rgb(40,40,40);
+	box-shadow:0px 5px 15px rgba(0,0,0,0.1);
+}
+.action-wrapper {
+	background:rgb(50,50,50);
+}
+#desktop .action-wrapper:hover.action-wrapper svg {
+	fill:rgb(0,150,255);
+}
+.action-wrapper svg {
+	fill:rgb(245,245,245);
+}
+
+.editor-content {
+	color:rgb(245,245,245);
+}
+.editor-content:empty:before {
+	color:rgb(150,150,150);
+}
+.editor-menu-wrapper {
+	background:rgb(65,65,65);
+	box-shadow:0px 10px 20px rgba(0,0,0,0.1);
+}
+.editor-menu-button {
+	color:rgb(245,245,245);
+}
+#desktop .editor-menu-button:hover {
+	background:rgb(0,150,255);
+	color:rgb(245,245,245);
+}
+#desktop .editor-menu-button.delete-button:hover {
+	background:rgb(230,60,60);
+	color:rgb(245,245,245);
+}
+.editor-submenu-lock-wrapper {
+	background:rgb(65,65,65);
+	box-shadow:-10px 10px 20px rgba(0,0,0,0.1);
+}
+.editor-submenu-share-wrapper {
+	background:rgb(65,65,65);
+	box-shadow:-10px 10px 20px rgba(0,0,0,0.1);
+}
+
+.note-title-edit-wrapper, .user-confirmation-wrapper, .note-lock-wrapper, .raw-data-wrapper, .help-wrapper {
+	background:rgba(0,0,0,0.92);
+}
+.note-title-edit-container, .user-confirmation-container, .note-lock-container, .raw-data-container, .help-container {
+	background:rgb(40,40,40);
+}
+.note-title-edit-text {
+	color:rgb(245,245,245);
+}
+.note-title-edit-input, .note-lock-input {
+	background:rgb(60,60,60);
+	color:rgb(245,245,245);
+}
+.note-title-edit-counter-wrapper {
+	background:rgb(60,60,60);
+	color:rgb(0,150,255);
+}
+.note-title-edit-buttons-wrapper svg {
+	fill:rgb(245,245,245);
+	background:rgb(60,60,60);
+}
+#desktop .note-title-edit-buttons-wrapper svg:hover {
+	fill:rgb(0,150,255);
+}
+
+.user-confirmation-title, .note-lock-title, .raw-data-title, .help-title {
+	color:rgb(245,245,245);
+}
+.user-confirmation-description, .note-lock-description {
+	color:rgb(245,245,245);
+}
+.user-confirmation-buttons-wrapper svg, .note-lock-buttons-wrapper svg, .raw-data-buttons-wrapper svg, .help-buttons-wrapper svg {
+	fill:rgb(245,245,245);
+	background:rgb(60,60,60);
+}
+#desktop .user-confirmation-buttons-wrapper svg:hover, #desktop .note-lock-buttons-wrapper svg:hover, #desktop .raw-data-buttons-wrapper svg:hover, #desktop .help-buttons-wrapper svg:hover {
+	fill:rgb(0,150,255);
+}
+
+.raw-data-content-wrapper, .help-content-wrapper {
+	background:rgb(60,60,60);
+	box-shadow:-2.5px 5px 15px rgba(0,0,0,0.2);
+}
+.raw-data-content, .help-content-text {
+	color:rgb(245,245,245);
+}
+
+.help-content-title {
+	border:2px solid rgb(0,150,255);
+	color:rgb(0,150,255);
+}
+#desktop .help-content-title:hover, .help-content-title.active {
+	color:rgb(245,245,245);
+	border:2px solid rgba(0,150,255,0);
+	background:rgb(0,150,255);
+}
+
+.settings-wrapper {
+	background:rgba(0,0,0,0.92);
+}
+.settings-container {
+	background:rgb(40,40,40);
+}
+.settings-title {
+	color:rgb(245,245,245);
+	background:rgb(55,55,55);
+	box-shadow:0px 5px 15px rgba(0,0,0,0.1);
+}
+.settings-wrapper .apply-button {
+	border:2px solid rgb(0,150,255);
+	color:rgb(0,150,255);
+}
+#desktop .settings-wrapper .apply-button:hover {
+	background:rgb(0,150,255);
+	color:rgb(245,245,245);
+}
+.settings-wrapper .close-button {
+	border:2px solid rgb(0,150,255);
+	color:rgb(0,150,255);
+}
+#desktop .settings-wrapper .close-button:hover {
+	background:rgb(0,150,255);
+	color:rgb(245,245,245);
+}
+.settings-sidebar-wrapper {
+	background:rgb(65,65,65);
+	box-shadow:0px 10px 15px rgba(0,0,0,0.1);
+}
+.settings-sidebar-button {
+	color:rgb(245,245,245);
+	border-right:2px solid rgba(245,245,245,0);
+}
+#desktop .settings-sidebar-button:hover {
+	background:rgb(0,150,255);
+	color:rgb(245,245,245);
+}
+.settings-note-wrapper {
+	border-bottom:1px solid rgb(80,80,80);
+	color:rgb(245,245,245);
+}
+.settings-note-wrapper:last-of-type {
+	border-bottom:1px solid rgba(80,80,80,0);
+}
+.settings-note-delete-button {
+	color:rgb(230,60,60);
+	border:2px solid rgb(230,60,60);
+}
+#desktop .settings-note-delete-button:hover {
+	background:rgb(230,60,60);
+	color:rgb(245,245,245);
+	border:2px solid rgba(230,60,60,0);
+}
+.settings-section {
+	border-bottom:1px solid rgb(80,80,80);
+}
+.settings-heading-text {
+	color:rgb(245,245,245);
+}
+.settings-action-button.blue {
+	color:rgb(0,150,255);
+	border:2px solid rgb(0,150,255);
+}
+#desktop .settings-action-button.blue:hover {
+	background:rgb(0,150,255);
+	color:rgb(245,245,245);
+	border:2px solid rgba(0,150,255,0);
+}
+.settings-action-button.red {
+	color:rgb(230,60,60);
+	border:2px solid rgb(230,60,60);
+}
+#desktop .settings-action-button.red:hover {
+	background:rgb(230,60,60);
+	color:rgb(245,245,245);
+	border:2px solid rgba(230,60,60,0);
+}
+.settings-action-button.active {
+	background:rgb(0,150,255);
+	color:rgb(245,245,245);
+	border:2px solid rgba(0,150,255,0);
+}
+.settings-input-field {
+	background:rgb(60,60,60);
+	color:rgb(235,235,235);
+}
+
+.notification-wrapper {
+	background:rgb(0,150,255);
+	box-shadow:0px 10px 20px rgba(0,0,0,0.1);
+	color:rgb(245,245,245);
+}
+
+.login-page-overlay {
+	background:rgba(0,0,0,0.85);
+}
+
+.login-container {
+	background:rgb(40,40,40);
+	color:rgb(245,245,245);
+	box-shadow:0px 5px 15px rgba(0,0,0,0.2);
+}
+.login-input-field {
+	background:rgb(60,60,60);
+	color:rgb(245,245,245);
+}
+.login-button {
+	background:rgb(0,150,255);
+	color:rgb(245,245,245);
+}
+#desktop .login-button:hover {
+	background:rgb(0,130,255);
+	color:rgb(245,245,245);
+}
+.login-remember-active {
+	color:rgb(233,233,233) !important;
+	background:rgb(0,150,255) !important;
+}
+.login-remember-wrapper {
+	box-shadow:0px 5px 15px rgba(0,0,0,0.15);
+	background:rgb(60,60,60);
+	color:rgb(150,150,150);
+}
+#desktop .login-remember-wrapper:hover {
+	color:rgb(233,233,233);
+	background:rgb(0,150,255);
+}
+
+.note-container-placeholder {
+	border-bottom:1px solid rgb(80,80,80);
+}
+.note-title-placeholder {
+	background:rgb(245,245,245);
+}
+.note-date-placeholder {
+	background:rgb(140,140,140);
+}
+.note-icon-placeholder-right {
+	background:rgb(200,200,200);
+}
+.note-icon-placeholder-left {
+	background:rgb(200,200,200);
+}
