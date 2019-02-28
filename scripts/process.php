@@ -2,9 +2,20 @@
 	session_start();
 	$username = $_SESSION['Username'];
 	$account = json_decode(file_get_contents("../source/cfg/account.config"), true);
+	$token = json_decode(file_get_contents("../source/cfg/token.config"), true);
+	if(!empty($token["time"]) && time() - $token["time"] > 604800) {
+		$token["key"] = str_shuffle(hash("sha512", str_shuffle(time())));
+		$token["time"] = "";
+		$json = json_encode($token);
+		$write = file_put_contents("../source/cfg/token.config", $json);
+		setcookie("x-notes-remember-me", null, -1, "/");
+	}
+	if(isset($_COOKIE['x-notes-remember-me']) && $_COOKIE['x-notes-remember-me'] == $token["key"] && !empty($token["time"])) {
+		$token_valid = true;
+	}
 	$valid_username = $account["username"];
 	$valid_password = $account["password"];
-	if(strtolower($username) == strtolower($valid_username)) {
+	if(strtolower($username) == strtolower($valid_username) or $token_valid) {
 		$logged_in = true;
 	}
 	
@@ -14,9 +25,24 @@
 		if(!empty($_POST['username']) && !empty($_POST['password'])) {			
 			$username = strtolower($_POST['username']);
 			$password = $_POST["password"];
+			$remember = $_POST["remember"];
 			
 			if(strtolower($username) == strtolower($valid_username) && password_verify($password, $valid_password)) {
 				$_SESSION['Username'] = $valid_username;
+				
+				$token["key"] = str_shuffle(hash("sha512", str_shuffle(time())));
+				
+				if($remember == "true") {
+					$token["time"] = time();
+					setcookie("x-notes-remember-me", $token["key"], time() + 604800, "/");
+				}
+				else {
+					$token["time"] = "";
+					setcookie("x-notes-remember-me", null, -1, "/");
+				}
+				
+				$json = json_encode($token);
+				$write = file_put_contents("../source/cfg/token.config", $json);
 				echo "done";
 			}
 			else {
@@ -31,6 +57,10 @@
 		session_start();
 		session_destroy();
 		$_SESSION = array();
+		$token["key"] = str_shuffle(hash("sha512", str_shuffle(time())));
+		$token["time"] = "";
+		$json = json_encode($token);
+		$write = file_put_contents("../source/cfg/token.config", $json);
 		if(empty($_SESSION)) {
 			echo "done";	
 		}

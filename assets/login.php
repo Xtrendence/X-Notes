@@ -1,13 +1,3 @@
-<?php
-	if(isset($_COOKIE['x-notes-login-username'])) {
-		$username_fill = $_COOKIE['x-notes-login-username'];
-		$remember_me = "login-remember-active";
-	}
-	if(isset($_COOKIE['x-notes-login-password'])) {
-		$password_fill = base64_decode($_COOKIE['x-notes-login-password']);
-		$remember_me = "login-remember-active";
-	}
-?>
 <!-- Copyright <?php echo date('Y'); ?> © Xtrendence -->
 <!DOCTYPE html>
 <html>

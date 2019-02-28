@@ -10,23 +10,21 @@ $(document).ready(function() {
 	// Login Functionality
 	
 	$(".login-button").click(function() {
+		var username = $(".username").val();
+		var password = $(".password").val();
+		if($(".login-remember-wrapper").hasClass("login-remember-active")) {
+			var remember = "true";
+		}
+		else {
+			var remember = "false";
+		}
 		$.ajax ({ 
 			type: "POST",
-			data: { action: "login", username: $(".username").val(), password: $(".password").val() },
+			data: { action: "login", username: username, password: password, remember: remember },
 			url: "./scripts/process.php",
 			success: function(data) {
 				if(data == "done") {
 					notify("Loading...", "You are being logged in.", "blue", 2500);
-					if($(".login-remember-wrapper").hasClass("login-remember-active")) {
-						var username = $(".username").val();
-						var password = window.btoa($(".password").val());
-						$.cookie("x-notes-login-username", username, { expires: 365 });
-						$.cookie("x-notes-login-password", password, { expires: 365 });
-					}
-					else {
-						$.removeCookie("x-notes-login-username");
-						$.removeCookie("x-notes-login-password");
-					}
 					setTimeout(function() {
 						location.reload();
 					}, 2500);
@@ -53,6 +51,20 @@ $(document).ready(function() {
 	
 	// Functions
 	
+	function generate_token(username, password) {
+		$.ajax({
+			type: "POST",
+			data: { action: "generate-token", username: username, password: password },
+			url: "./scripts/process.php"
+		});
+	}
+	function expire_token(username, password) {
+		$.ajax({
+			type: "POST",
+			data: { action: "expire-token", username: username, password: password },
+			url: "./scripts/process.php"
+		});
+	}
 	function get_placeholders() {
 		$.ajax({
 			type: "POST",
