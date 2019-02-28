@@ -50,21 +50,7 @@ $(document).ready(function() {
 	});
 	
 	// Functions
-	
-	function generate_token(username, password) {
-		$.ajax({
-			type: "POST",
-			data: { action: "generate-token", username: username, password: password },
-			url: "./scripts/process.php"
-		});
-	}
-	function expire_token(username, password) {
-		$.ajax({
-			type: "POST",
-			data: { action: "expire-token", username: username, password: password },
-			url: "./scripts/process.php"
-		});
-	}
+
 	function get_placeholders() {
 		$.ajax({
 			type: "POST",

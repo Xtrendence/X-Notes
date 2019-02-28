@@ -3,7 +3,6 @@
 <html>
 	<head>
 		<script src="./source/js/jquery.js"></script>
-		<script src="./source/js/jquery-cookie.js"></script>
 		<script src="./source/js/login.js?<?php echo time(); ?>"></script>
 		<link rel="stylesheet" href="./source/css/structure.css?<?php echo time(); ?>">
 		<link rel="stylesheet" href="./source/css/<?php echo $theme; ?>.css?<?php echo time(); ?>" class="theme-stylesheet">
