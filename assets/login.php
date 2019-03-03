@@ -21,8 +21,8 @@
 			</div>
 			<div class="login-container">
 				<div class="login-form-wrapper">
-					<input class="login-input-field username" type="text" placeholder="Username" value="<?php echo $username_fill; ?>">
-					<input class="login-input-field password" type="password" placeholder="Password" value="<?php echo $password_fill; ?>">
+					<input class="login-input-field username" type="text" placeholder="Username">
+					<input class="login-input-field password" type="password" placeholder="Password">
 				</div>
 				<button class="login-button">Login</button>
 			</div>
