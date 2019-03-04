@@ -7,9 +7,14 @@ $(document).ready(function() {
 	
 	$(".search-bar").on("keyup", function() {
 		var search = $(this).val().toLowerCase();
-		$(".note-wrapper").filter(function() {
-			$(this).toggle($(this).text().toLowerCase().indexOf(search) > -1);
-		});
+		if(search.trim().length != 0) {
+			$(".note-wrapper").filter(function() {
+				$(this).toggle($(this).text().toLowerCase().indexOf(search) > -1);
+			});
+		}
+		else {
+			$(".note-wrapper").show();
+		}
 	});
 	
 	// Sidebar Middle Functionality
@@ -834,7 +839,6 @@ $(document).ready(function() {
 	// Binding Functions
 	
 	$(".editor-empty").on("contextmenu", function(event) {
-		event.preventDefault();
 		$(this).trigger("click");
 	});
 	
