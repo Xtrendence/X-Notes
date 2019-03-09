@@ -237,6 +237,12 @@
 			$current = json_decode(file_get_contents($file), true);
 			$valid_password = $current["password"];
 			if(password_verify($current_password, $valid_password)) {
+				$encrypted = $current["content"];
+				$aes = new AES($encrypted, $current_password, 256);
+				$decrypted = $aes->decrypt();
+				$aes = new AES($decrypted, $new_password, 256);
+				$encrypted = $aes->encrypt();
+				$current["content"] = $encrypted;
 				$current["time_modified"] = time();
 				$current["password"] = password_hash($new_password, PASSWORD_BCRYPT);
 				$handle = fopen($file, "w");
