@@ -8,4 +8,4 @@ X:/Notes is a note taking web app developed in HTML, CSS and JavaScript (+jQuery
 
 **Password**: root
 
-![X:/Notes](https://www.xtrendence.com/www/images/xnotes/xnotes-dark-large.png)
+![X:/Notes](https://i.imgur.com/9U9nknc.jpg)
